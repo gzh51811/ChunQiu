@@ -23,7 +23,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 .tabbar {
   height: 40px;
   vertical-align:center;

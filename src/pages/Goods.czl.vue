@@ -12,15 +12,6 @@ import headerComponent from "../components/header.czl.vue";
 import mainComponent from "../components/main.czl.vue";
 import footerComponent from "../components/footer.czl.vue";
 export default {
-  data() {
-    return {
-        // nums:[
-        //   {
-        //     num:10
-        //   }
-        // ]
-    }
-  },
   components: {
     headerComponent,
     bannerComponent,
@@ -34,7 +25,7 @@ body {
   margin: 0;
 }
 #goods{
-  width: 375px;
+  width: 100%;
   position:relative;
 }
 </style>

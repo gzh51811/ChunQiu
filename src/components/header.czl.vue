@@ -26,18 +26,18 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 .header {
-    height: 40px;
+    height: 1rem;
   .el-icon-menu {
-    margin-right: 5px;
-    font-size: 20px;
+    margin-right: .3rem;
+    font-size: 1rem;
   }
   .el-icon-share {
-    font-size: 20px;
+    font-size: 1rem;
   }
   .el-icon-back {
-    font-size: 20px;
+    font-size: 1rem;
   }
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div>
 <!-- 轮播图 -->
-    <div class="banner">
+    <div id="banner">
       <mt-swipe :show-indicators="false" :auto="0" @change="handleChange">
         <mt-swipe-item>
           <img src="../assets/img/czl/banner3.jpg" alt>
@@ -90,7 +90,7 @@ export default {
       // console.log(id);
       this.$axios.post("http://localhost:1888/registry").then(res=>{
                 this.title = res.data[0].Data[9];
-                console.log(res.data[0]);
+                // console.log(res.data[0]);
             })
     },
     //弹窗
@@ -111,9 +111,50 @@ export default {
   }
 };
 </script>
-<style lang="scss">
+<style scoped lang="scss">
+.t-box {
+  padding: 0.5rem;
+  text-align: left;
+  .h2 {
+    font-weight: 700;
+    max-height: none;
+    color: #333;
+    font-size: 0.6rem;
+    margin-bottom: .3rem;
+    line-height: 0.7rem;
+    overflow: hidden;
+  }
+  .item-money {
+    text-align: left;
+    .crred {
+      font-weight: 700;
+      color: #f66;
+    }
+  }
+  .crred {
+    font-weight: 700;
+    color: #f66;
+  }
+  .item-card {
+    display: inline-block;
+    overflow: hidden;
+    padding: 0.5rem 0 0.5rem 0;
+    color: #81838e;
+    padding-bottom: 0;
+    text-align: left;
+    .tag {
+      padding-left: 0;
+      border: none;
+      color: #666;
+    }
+  }
+}
 .el-message-box{
-  width: 300px;
+  height: 100%;
+  width: 15.75rem;
+}
+h2{
+  font-size:0.6rem;
 }
 .el-icon-question{
   color:rgb(22, 230, 230);
@@ -122,29 +163,25 @@ export default {
   height: 100%;
   text-align: center;
   .popup_top {
-    width: 375px;
-    // width: 100%;
-    height: 40px;
     text-align: left;
-    padding-top:10px;
+    padding-top:.325rem;
     .popup_l {
       font-weight:700;
-      margin-left:10px;
+      font-size:0.6rem;
+      margin-left:.325rem;
     }
+    >i{
+        font-size:0.6rem;
+      }
     .popup_r {
         display:block;
         float:right;
-      margin-right:10px;
+      margin-right:.325rem;
     }
   }
-
-  img {
-    width: 300px;
-    height: 100px;
-  }
 }
-.banner {
-  height: 205px;
+#banner {
+  height: 6rem;
   position:relative;
   .banner_fix{
     font-weight: 900;
@@ -170,7 +207,7 @@ export default {
     text-align: left;
     display: inline-block;
     .btn {
-      padding: 0 0.8rem;
+      width:2rem;
       display: inline-block;
       text-align: center;
       line-height: 1rem;
@@ -178,7 +215,7 @@ export default {
       background-size: 100% 100%;
       text-decoration: none;
       margin: 0.1rem;
-      font-size: 0.8rem;
+      font-size: 0.05rem;
       color: #fff;
     }
     .el-icon-arrow-right {

@@ -4,7 +4,6 @@
     <div class="data">
       <h4>选择出发时间及人数
         <span>(以下价格均为起价)</span>
-        <i class="el-icon-arrow-right"></i>
       </h4>
       <mt-button
         v-for="(btn,idx) in btns"
@@ -153,7 +152,7 @@ export default {
   }
 };
 </script>
-<style lang="scss">
+<style scoped lang="scss">
 #searchBar{
   .isFixed{
     position:fixed;
@@ -164,37 +163,32 @@ export default {
   }
 }
 .active {
-  border: 2px solid #58bc58;
+  border: 0.1rem solid #58bc58;
 }
 .mint-tab-item-label {
   font-weight: 700;
 }
 .data {
-  height: 14rem;
-  border-top: 15px solid rgb(236, 224, 224);
-  border-bottom: 15px solid rgb(236, 224, 224);
+  height: 6rem;
+  border-top: 0.5rem solid rgb(236, 224, 224);
+  border-bottom: 0.5rem solid rgb(236, 224, 224);
   > h4 {
-    border-left: 4px solid #58bc58;
-    margin-left: 8px;
-    padding-left: 8px;
+    font-size: 0.55rem;
+    border-left: 0.1rem solid #58bc58;
+    margin-left: 0.1rem;
+    padding-left: 0.1rem;
     > span {
-      font-size: 14px;
-      padding-left: 8px;
-    }
-    .el-icon-arrow-right {
-      display: block;
-      float: right;
-      font-size: 18px;
-      margin-right: 18px;
+      font-size: 0.3rem;
+      padding-left: 0.1rem;
     }
   }
   .datas {
     display: block;
     float: left;
-    font-size: 12px;
-    width: 5rem;
-    height: 3rem;
-    margin: 0.5rem 0.4rem;
+    font-size: 0.3rem;
+    width: 2rem;
+    height: 2rem;
+    margin: 0.2rem;
     .crred {
       font-weight: 700;
       color: #f66;
@@ -202,15 +196,15 @@ export default {
   }
 }
 .t-box {
-  padding: 10px;
+  padding: 0.5rem;
   text-align: left;
   .h2 {
     font-weight: 700;
     max-height: none;
     color: #333;
-    font-size: 24px;
-    margin-bottom: 10px;
-    line-height: 25px;
+    font-size: 1.2rem;
+    margin-bottom: .625rem;
+    line-height: 1.2rem;
     overflow: hidden;
   }
   .item-money {

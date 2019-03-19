@@ -1,0 +1,125 @@
+html,body{
+    height: 100%;
+    background-color: #f6f7fb;
+}
+.dest-container{
+    header{
+        z-index: 111;
+        background:white;
+        border-bottom: .013333rem solid #e8e8e8;
+        font-size: 0.5rem;
+
+        h1{
+            color: #333;
+        }
+        i,button{
+            color:#00be88!important;
+        }
+    }
+    .dest-search{
+        border-bottom: .013333rem solid #e8e8e8;
+        height: 1rem;
+        margin-top:1rem;
+        background-color: #fff;
+        position: relative;
+        overflow: hidden;
+        padding: 0.2rem 0;
+        .search-left{
+            display: inline-block;
+            color: #666;
+            padding-left: 0.4rem;
+            padding-top: 0.3rem;
+            i{
+                color: #00be88;
+                font-weight: bold;
+                vertical-align: middle;
+                margin-left: 0.1rem;
+            }
+        }
+        .mint-search{
+            position: absolute;
+            width: 75%;
+            right: 0.3rem;
+            top: 0.25rem;
+            .mint-searchbar{
+                padding:0;
+                padding-left: 0.2rem;
+                border-radius: 0.5rem;
+                background:#f2f3f7;
+                .mint-searchbar-inner{
+                    background:none;
+                    i{
+                        color: #4c4a4a;
+                        padding-right: 0.2rem;
+
+                    }
+                    input{
+                        background:none;
+                    }
+                }
+                .mint-searchbar-cancel{
+                    padding-right: 0.5rem;
+                }
+            }
+        }
+    }
+    .hot-city{
+        .tab-city{
+            overflow: hidden;
+            width: 20%;
+            background:white;
+            float: left;
+            li{
+                border-bottom: .013333rem solid #e8e8e8;
+                padding:.5rem 0;
+                text-align: center;
+            }
+        }
+        .tab-content{
+            width: 80%;
+            float: left;
+            .ul-img{
+                overflow: hidden;
+                padding: .3rem;
+                .dataitem{
+                    width: 45%;
+                    height: 2.22rem;
+                    border-radius: .1rem;
+                    float: left;
+                    overflow: hidden;
+                    margin: 0.18rem;
+                    .datalist{
+                        display: block;
+                        position: relative;
+                        overflow: hidden;
+                        .scenicName{
+                            position: absolute;
+                            top: .6rem;
+                            left: 0;
+                            color: white;
+                            right: 0;
+                            text-align: center;
+                            h3{
+                                font-size: .5rem;
+                                font-weight: bold;
+                            }
+                        }
+                        img{
+                            width: 100%;
+                        }
+                        &:before{
+                            position: absolute;
+                            content: '';
+                            top: 0;
+                            left: 0;
+                            bottom:0;
+                            right:0;
+                            background: #333;
+                            opacity: 0.3;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
