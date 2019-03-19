@@ -13,41 +13,16 @@
         </div>
         <div class="hot-city">
             <ul class="tab-city">
-                <li>国内</li>
-                <li>国内</li>
-                <li>国内</li>
-                <li>国内</li>
-                <li>国内</li>
-                <li>国内</li>
-                <li>国内</li>
-                <li>国内</li>
+                <li @click="chang(secnic.id,idx)"  v-for="(secnic,idx) in list" :class="{ active: idx == curidx }" :key="idx">{{secnic.name}}</li>
             </ul>
             <div class="tab-content">
                 <ul class="ul-img">
-                    <li class="dataitem">
-                        <a href="###" class="datalist">
-                            <img src="../assets/img/dest01.png" alt="">
+                    <li class="dataitem" v-for="(img,idx) in imglist" :key="idx">
+                        <a :href="img.linkurl" class="datalist">
+                            <img :src="img.imgurl" alt="">
                             <div class="scenicName">
-                                <h3>长白山</h3>
-                                <p>CHANGBAISHAN</p>
-                            </div> 
-                        </a>
-                    </li>
-                    <li class="dataitem">
-                        <a href="###" class="datalist">
-                            <img src="../assets/img/dest01.png" alt="">
-                            <div class="scenicName">
-                                <h3>长白山</h3>
-                                <p>CHANGBAISHAN</p>
-                            </div> 
-                        </a>
-                    </li>
-                    <li class="dataitem">
-                        <a href="###" class="datalist">
-                            <img src="../assets/img/dest01.png" alt="">
-                            <div class="scenicName">
-                                <h3>长白山</h3>
-                                <p>CHANGBAISHAN</p>
+                                <h3>{{img.title}}</h3>
+                                <p>{{img.subtitle}}</p>
                             </div> 
                         </a>
                     </li>
@@ -61,10 +36,56 @@
 export default {
   data() {
     return {
-      value: ""
+      value: "",
+      list: [],
+      imglist: [],
+      curidx: 0
     };
+  },
+  methods: {
+    chang(idx, id) {
+      this.$axios
+        .get("http://localhost:1811/goodslist/id", {
+          params: {
+            id: idx
+          }
+        })
+        .then(res => {
+          let { data } = res;
+          //   console.log(data[0].data.banners);
+          this.imglist = data[0].data.banners;
+          console.log(this.imglist);
+        });
+      this.curidx = id;
+    }
+  },
+  created() {
+    this.$axios.get("http://localhost:1811/goodslist/all").then(res => {
+      // console.log(res);
+      let { data } = res;
+      for (let i = 0; i < data.length; i++) {
+        this.list.push(data[i]);
+      }
+      console.log(this.list);
+    });
+    //初始化数据
+    this.$axios
+      .get("http://localhost:1811/goodslist/id", {
+        params: {
+          id: 913
+        }
+      })
+      .then(res => {
+        let { data } = res;
+        //   console.log(data[0].data.banners);
+        this.imglist = data[0].data.banners;
+      });
   }
 };
 </script>
 <style scoped lang="scss">
+.active {
+  background-color: #f6f7fb;
+  color: #00be88;
+}
 </style>
