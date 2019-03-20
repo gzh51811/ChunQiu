@@ -45,7 +45,7 @@ export default {
   methods: {
     chang(idx, id) {
       this.$axios
-        .get("http://localhost:1811/goodslist/id", {
+        .get("http://localhost:1888/goodslist/id", {
           params: {
             id: idx
           }
@@ -60,7 +60,7 @@ export default {
     }
   },
   created() {
-    this.$axios.get("http://localhost:1811/goodslist/all").then(res => {
+    this.$axios.get("http://localhost:1888/goodslist/all").then(res => {
       // console.log(res);
       let { data } = res;
       for (let i = 0; i < data.length; i++) {
@@ -70,14 +70,14 @@ export default {
     });
     //初始化数据
     this.$axios
-      .get("http://localhost:1811/goodslist/id", {
+      .get("http://localhost:1888/goodslist/id", {
         params: {
           id: 913
         }
       })
       .then(res => {
         let { data } = res;
-        //   console.log(data[0].data.banners);
+          console.log(data[0].data.banners);
         this.imglist = data[0].data.banners;
       });
   }
