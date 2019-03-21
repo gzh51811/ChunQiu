@@ -65,3 +65,73 @@
       *手机号：123
 
 ## 项目效果
+
+    |-- index.html
+    |-- package-lock.json
+    |-- package.json
+    |-- server.js
+    |-- api
+    |   |-- classifiedItemForm.json
+    |   |-- goodslist.json
+    |   |-- orderForm.json
+    |   |-- user.json
+    |   |-- db
+    |   |   |-- index.js
+    |   |-- routers
+    |       |-- goodsAdd.js
+    |       |-- goodslist.js
+    |       |-- index.js
+    |       |-- listEdit.js
+    |       |-- listitem.js
+    |       |-- login.js
+    |       |-- orderForm.js
+    |       |-- upload.js
+    |       |-- userlist_login.js
+    |-- assert
+    |   |-- fonts
+    |   |-- layui
+    |   |-- lib
+    |       |-- default.css
+    |       |-- jquery-1.10.1.min.js
+    |       |-- normalize.css
+    |       |-- prefixfree.min.js
+    |       |-- styles.css
+    |-- css
+    |   |-- base.css
+    |   |-- base.css.map
+    |   |-- common.css
+    |   |-- common.css.map
+    |   |-- goodsAdd.css
+    |   |-- goodsAdd.css.map
+    |   |-- goodslist.css
+    |   |-- goodslist.css.map
+    |   |-- reg.css
+    |   |-- user_add.css
+    |-- html
+    |   |-- goodsAdd.html
+    |   |-- goodslist.html
+    |   |-- listEdit.html
+    |   |-- listitem.html
+    |   |-- modifygood.html
+    |   |-- order_form.html
+    |   |-- template.html
+    |   |-- test.html
+    |   |-- userAdd.html
+    |   |-- useradd_bianji.html
+    |   |-- userlist.html
+    |-- js
+    |   |-- cookie.js
+    |   |-- goodsAdd.js
+    |   |-- goodslist.js
+    |   |-- listEdit.js
+    |   |-- listitem.js
+    |   |-- order_form.js
+    |   |-- useradd.js
+    |   |-- useradd_bianji.js
+    |   |-- user_list.js
+    |-- uploads
+        |-- downarrow.png
+        |-- help.png
+
+```
+
